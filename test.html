@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="text" id="ip" autocomplete="on" >
+<button onclick="search()" name="b1">Search</button>
+<script>
+    var parts = [['HD', 999], ['MOUSE', 49], ['KEY_BOARD', 99], ['CPU', 499], ['HD',9999]];
+    var n = document.getElementById("ip").value;
+    function search() {
+        try {
+            for(var i=0; i < parts.length; i++){
+                if(n === parts[i][0]){
+                    //document.write("done");
+                    document.write("<br>");
+                    document.write(parts[i][0] + "=" + parts[i][1]);
+                }
+            }
+           console.log(n);
+        }
+        catch(err) {
+            document.write(err.message);
+        }
+    }
+</script>
+</body>
+</html>
