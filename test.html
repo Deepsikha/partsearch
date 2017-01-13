@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <!--<script src="test.js"></script>-->
 </head>
 <body>
-<input type="text" id="ip" autocomplete="on" >
-<button onclick="search()" name="b1">Search</button>
+
+<input id="ip" type="text" autocomplete="on" >
+<button onclick="search()" name="b1">Check</button>
 <script>
-    var parts = [['HD', 999], ['MOUSE', 49], ['KEY_BOARD', 99], ['CPU', 499], ['HD',9999]];
-    var n = document.getElementById("ip").value;
+
+    var parts = [['HD', 999], ['MOUSE', 49], ['KEY_BOARD', 99], ['CPU', 499], ['HD',9999], ['HD',99999],['KEY-BOARD',9999]];
+    var n = "HD"// document.getElementById("ip").value;
     function search() {
         try {
             for(var i=0; i < parts.length; i++){
@@ -20,12 +22,26 @@
                     document.write(parts[i][0] + "=" + parts[i][1]);
                 }
             }
-           console.log(n);
+            console.log(n);
         }
         catch(err) {
             document.write(err.message);
         }
     }
+
 </script>
+<!--<button onclick="call()">Submit</button>-->
+<!--<script>-->
+
+    <!--var parts = [['HD', 999], ['MOUSE', 49], ['KEY_BOARD', 99], ['CPU', 499]];-->
+    <!--var n = document.getElementById("ip").value;-->
+    <!--function call()-->
+    <!--{-->
+        <!--//if(n === parts[i][1])       // for(let i=0; i < n; i++)-->
+       <!--// {-->
+            <!--console.print("hii");-->
+        <!--//}-->
+    <!--}-->
+<!--</script>-->
 </body>
 </html>
